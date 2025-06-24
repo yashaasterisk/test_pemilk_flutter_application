@@ -11,6 +11,9 @@ A modern Flutter application for property management, designed to streamline pro
 
 ## Screenshots
 <!-- Add screenshots of your app here -->
+![Splash Screen](assets/readme_images/image-1.png)
+![Home Screen](assets/readme_images/image.png)
+
 
 ## Getting Started
 
