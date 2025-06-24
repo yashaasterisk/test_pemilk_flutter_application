@@ -53,6 +53,16 @@ Aplikasi Flutter modern untuk manajemen properti, dirancang untuk memudahkan pen
 - `test/` - Unit test & widget test
 
 ## Dependensi
+
+**dependencies:**
+- flutter (SDK)
+- cupertino_icons: ^1.0.8
+- image_picker: ^1.0.7
+
+**dev_dependencies:**
+- flutter_test (SDK)
+- flutter_lints: ^5.0.0
+
 Lihat daftar lengkap di `pubspec.yaml`.
 
 ## Kontribusi
