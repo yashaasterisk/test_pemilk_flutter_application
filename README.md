@@ -11,12 +11,12 @@ Aplikasi Flutter modern untuk manajemen properti, dirancang untuk memudahkan pen
 
 ## Cuplikan Layar
 <p align="center">
-  <img src="assets/readme_images/image-1.png" alt="Splash Screen" width="300" />
+  <img src="assets/readme_images/image-1.png" alt="Splash Screen" width="100" />
   <br/>
   <em>Splash Screen</em>
 </p>
 <p align="center">
-  <img src="assets/readme_images/image.png" alt="Home Screen" width="300" />
+  <img src="assets/readme_images/image.png" alt="Home Screen" width="100" />
   <br/>
   <em>Home Screen</em>
 </p>
