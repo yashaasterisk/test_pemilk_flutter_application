@@ -1,59 +1,61 @@
 # test_pemilk_flutter_application
 
-A modern Flutter application for property management, designed to streamline property listing, check-in, and receptionist data management.
+Aplikasi Flutter modern untuk manajemen properti, dirancang untuk memudahkan pengelolaan listing properti, check-in, dan data resepsionis.
 
-## Features
-- Add and manage property listings
-- Check property details
-- Receptionist data management
-- Splash screen and home screen navigation
-- Cross-platform: Android, iOS, Web, Windows, macOS, Linux
+## Fitur Unggulan
+- Tambah & kelola data properti
+- Cek detail properti
+- Manajemen data resepsionis
+- Navigasi splash screen & home screen
+- Dukungan lintas platform: Android, iOS, Web, Windows, macOS, Linux
 
-## Screenshots
-<!-- Add screenshots of your app here -->
+## Cuplikan Layar
 ![Splash Screen](assets/readme_images/image-1.png)
+*Splash Screen*
+
 ![Home Screen](assets/readme_images/image.png)
+*Home Screen*
 
+## Mulai Cepat
 
-## Getting Started
-
-### Prerequisites
+### Prasyarat
 - [Flutter SDK](https://flutter.dev/docs/get-started/install)
-- Dart SDK (comes with Flutter)
-- Android Studio, VS Code, or any preferred IDE
+- Dart SDK (sudah termasuk dalam Flutter)
+- Android Studio, VS Code, atau IDE favorit Anda
 
-### Installation
-1. Clone the repository:
+### Instalasi
+1. Kloning repositori:
    ```sh
    git clone https://github.com/yourusername/test_pemilk_flutter_application.git
    cd test_pemilk_flutter_application
    ```
-2. Install dependencies:
+2. Install dependensi:
    ```sh
    flutter pub get
    ```
-3. Run the app:
+3. Jalankan aplikasi:
    ```sh
    flutter run
    ```
 
-## Project Structure
-- `lib/` - Main Dart source files
-  - `main.dart` - Entry point
-  - `home_screen.dart`, `splash_screen.dart`, `add_property.dart`, `check_property.dart`, `data_resepsionis.dart` - Core screens and logic
-- `assets/images/` - App images
-- `android/`, `ios/`, `web/`, `windows/`, `macos/`, `linux/` - Platform-specific code
-- `test/` - Unit and widget tests
+## Struktur Proyek
+- `lib/` - Sumber kode utama Dart
+  - `main.dart` - Titik masuk aplikasi
+  - `home_screen.dart`, `splash_screen.dart`, `add_property.dart`, `check_property.dart`, `data_resepsionis.dart` - Layar & logika utama
+- `assets/images/` - Gambar aplikasi
+- `assets/readme_images/` - Gambar untuk dokumentasi README
+- `android/`, `ios/`, `web/`, `windows/`, `macos/`, `linux/` - Kode spesifik platform
+- `test/` - Unit test & widget test
 
-## Dependencies
-See `pubspec.yaml` for a full list of dependencies.
+## Dependensi
+Lihat daftar lengkap di `pubspec.yaml`.
 
-## Contributing
-Contributions are welcome! Please open issues or submit pull requests for improvements and bug fixes.
+## Kontribusi
+Kontribusi sangat terbuka! Silakan buat issue atau pull request untuk perbaikan dan pengembangan fitur.
 
-## License
-This project is licensed under the MIT License.
+## Lisensi
+Proyek ini dilisensikan di bawah MIT License.
 
 ---
 
-For more information, see the [Flutter documentation](https://docs.flutter.dev/).
+Informasi lebih lanjut: [Dokumentasi Flutter](https://docs.flutter.dev/)
