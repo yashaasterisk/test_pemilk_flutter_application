@@ -10,13 +10,13 @@ Aplikasi Flutter modern untuk manajemen properti, dirancang untuk memudahkan pen
 - Dukungan lintas platform: Android, iOS, Web, Windows, macOS, Linux
 
 ## Cuplikan Layar
-<p align="center">
-  <img src="assets/readme_images/image-1.png" alt="Splash Screen" width="100" />
+<p align="left">
+  <img src="assets/readme_images/image-1.png" alt="Splash Screen" width="200" />
   <br/>
   <em>Splash Screen</em>
 </p>
-<p align="center">
-  <img src="assets/readme_images/image.png" alt="Home Screen" width="100" />
+<p align="left">
+  <img src="assets/readme_images/image.png" alt="Home Screen" width="200" />
   <br/>
   <em>Home Screen</em>
 </p>
