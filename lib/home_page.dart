@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
-import 'add_property.dart';
+import 'add_property_page.dart';
+import 'property_data_page.dart';
+import 'resepsionis_page.dart';
 
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+class HomePage extends StatelessWidget {
+  const HomePage({super.key});
 
   Widget buildMenuCard(
     String title,
@@ -20,17 +22,17 @@ class HomeScreen extends StatelessWidget {
         child: InkWell(
           borderRadius: BorderRadius.circular(18),
           onTap: onTap,
-          splashColor: Color(0xFF4B5E93).withOpacity(0.2),
-          highlightColor: Color(0xFF4B5E93).withOpacity(0.08),
+          splashColor: const Color(0xFF4B5E93).withAlpha((255 * 0.2).toInt()),
+          highlightColor: const Color(0xFF4B5E93).withAlpha((255 * 0.08).toInt()),
           child: Container(
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(18),
               image: DecorationImage(
                 image: AssetImage(imagePath),
                 fit: BoxFit.cover,
-                colorFilter: ColorFilter.mode(Colors.black38, BlendMode.darken),
+                colorFilter: const ColorFilter.mode(Colors.black38, BlendMode.darken),
               ),
-              boxShadow: [
+              boxShadow: const [
                 BoxShadow(
                   color: Colors.black12,
                   blurRadius: 8,
@@ -39,10 +41,10 @@ class HomeScreen extends StatelessWidget {
               ],
             ),
             alignment: Alignment.bottomLeft,
-            padding: EdgeInsets.all(18),
+            padding: const EdgeInsets.all(18),
             child: Text(
               title,
-              style: TextStyle(
+              style: const TextStyle(
                 color: Colors.white,
                 fontSize: 22,
                 fontWeight: FontWeight.bold,
@@ -66,15 +68,15 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color(0xFF3B5998),
-        iconTheme: IconThemeData(color: Colors.white),
+        backgroundColor: const Color(0xFF3B5998),
+        iconTheme: const IconThemeData(color: Colors.white),
         centerTitle: true,
         title: Row(
           mainAxisSize: MainAxisSize.min,
           children: [
             Image.asset('assets/images/inap_logo_2.png', height: 32),
-            SizedBox(width: 8),
-            Text(
+            const SizedBox(width: 8),
+            const Text(
               'InapKita',
               style: TextStyle(
                 color: Colors.white,
@@ -89,7 +91,7 @@ class HomeScreen extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 16.0),
         child: ListView(
           children: [
-            SizedBox(height: 28),
+            const SizedBox(height: 28),
             Center(
               child: Text(
                 "Menu Pemilik",
@@ -102,12 +104,12 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: 32),
+            const SizedBox(height: 32),
             Row(
               children: [
                 Expanded(
                   child: AnimatedContainer(
-                    duration: Duration(milliseconds: 200),
+                    duration: const Duration(milliseconds: 200),
                     curve: Curves.easeInOut,
                     child: buildMenuCard(
                       "Add Property",
@@ -122,10 +124,10 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(width: 16),
+                const SizedBox(width: 16),
                 Expanded(
                   child: AnimatedContainer(
-                    duration: Duration(milliseconds: 200),
+                    duration: const Duration(milliseconds: 200),
                     curve: Curves.easeInOut,
                     child: buildMenuCard(
                       "Check Property",
@@ -133,7 +135,7 @@ class HomeScreen extends StatelessWidget {
                       () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (_) => CheckPropertyPage()),
+                          MaterialPageRoute(builder: (_) => PropertyDataPage()),
                         );
                       },
                       aspectRatio: 1,
@@ -142,9 +144,9 @@ class HomeScreen extends StatelessWidget {
                 ),
               ],
             ),
-            SizedBox(height: 18),
+            const SizedBox(height: 18),
             AnimatedContainer(
-              duration: Duration(milliseconds: 200),
+              duration: const Duration(milliseconds: 200),
               curve: Curves.easeInOut,
               child: buildMenuCard(
                 "Data Resepsionis",
@@ -152,37 +154,16 @@ class HomeScreen extends StatelessWidget {
                 () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (_) => ResepsionisPage()),
+                    MaterialPageRoute(builder: (_) => const ResepsionisPage()),
                   );
                 },
                 aspectRatio: 2.1,
               ),
             ),
-            SizedBox(height: 32),
+            const SizedBox(height: 32),
           ],
         ),
       ),
-    );
-  }
-}
-
-// ===== Dummy Pages =====
-class CheckPropertyPage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: Text("Check Property")),
-      body: Center(child: Text("Halaman Cek Properti")),
-    );
-  }
-}
-
-class ResepsionisPage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: Text("Data Resepsionis")),
-      body: Center(child: Text("Halaman Data Resepsionis")),
     );
   }
 }

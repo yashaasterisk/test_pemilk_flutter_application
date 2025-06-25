@@ -4,18 +4,19 @@ import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 
 class AddPropertyPage extends StatefulWidget {
+  const AddPropertyPage({super.key}); // gunakan super.key
+
   @override
-  _AddPropertyPageState createState() => _AddPropertyPageState();
+  AddPropertyPageState createState() => AddPropertyPageState(); // public state
 }
 
-class _AddPropertyPageState extends State<AddPropertyPage> {
+class AddPropertyPageState extends State<AddPropertyPage> {
   final _formKey = GlobalKey<FormState>();
   String? propertyName;
   String? propertyAddress;
   String? propertyDescription;
   String? propertyPhone;
   String? propertyPrice;
-  // Placeholder for image
   ImageProvider? propertyImage;
   final ImagePicker _picker = ImagePicker();
 
@@ -32,9 +33,9 @@ class _AddPropertyPageState extends State<AddPropertyPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color(0xFF3B5998),
+        backgroundColor: const Color(0xFF3B5998),
         centerTitle: true,
-        iconTheme: IconThemeData(color: Colors.white),
+        iconTheme: const IconThemeData(color: Colors.white),
         title: Row(
           mainAxisSize: MainAxisSize.min,
           mainAxisAlignment: MainAxisAlignment.center,
@@ -43,8 +44,8 @@ class _AddPropertyPageState extends State<AddPropertyPage> {
               tag: 'inap_logo_2',
               child: Image.asset('assets/images/inap_logo_2.png', height: 32),
             ),
-            SizedBox(width: 8),
-            Text(
+            const SizedBox(width: 8),
+            const Text(
               'InapKita',
               style: TextStyle(
                 color: Colors.white,
@@ -55,7 +56,7 @@ class _AddPropertyPageState extends State<AddPropertyPage> {
           ],
         ),
         elevation: 4,
-        shadowColor: Color(0xFF4B5E93).withOpacity(0.2),
+        shadowColor: const Color(0xFF4B5E93).withAlpha((255 * 0.2).toInt()), // ganti withOpacity
       ),
       body: GestureDetector(
         onTap: () => FocusScope.of(context).unfocus(),
@@ -205,7 +206,7 @@ class _AddPropertyPageState extends State<AddPropertyPage> {
                             borderRadius: BorderRadius.circular(16),
                           ),
                           elevation: 4,
-                          shadowColor: Color(0xFF4B5E93).withOpacity(0.3),
+                          shadowColor: Color(0xFF4B5E93).withAlpha((255 * 0.3).toInt()), // ganti withOpacity
                         ),
                         onPressed: () {
                           if (_formKey.currentState!.validate()) {
@@ -237,7 +238,6 @@ class _AddPropertyPageState extends State<AddPropertyPage> {
     );
   }
 
-  // Add helper widgets for label and text field
   Widget _buildLabel(String text) {
     return Padding(
       padding: const EdgeInsets.only(left: 2.0, bottom: 4.0),
