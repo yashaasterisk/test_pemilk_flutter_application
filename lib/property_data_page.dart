@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'add_property_page.dart';
 import 'edit_property_page.dart';
-import 'models/property_model.dart';
 // import 'services/api_service.dart'; // akan dibuat
 
 class PropertyDataPage extends StatelessWidget {
